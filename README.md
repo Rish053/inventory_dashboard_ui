@@ -1,16 +1,35 @@
-# React + Vite
+# Inventory Movement Dashboard - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the frontend user interface for the Inventory Movement Dashboard, built with React and Vite. It provides a responsive, single-page application to upload, validate, and visualize stock movement data.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+* **Secure File Upload:** Allows users to upload a JSON file containing stock records.
+* **Client-Side Validation:** Computes a SHA-256 digest of the uploaded file directly in the browser using the Web Crypto API, sending it to the backend for integrity verification.
+* **Interactive Dashboard:** Displays data visualizations only after successful SHA validation.
+    * **Pie Chart:** Shows the proportion of total quantity moved (IN vs. OUT).
+    * **Time-Series Chart:** Displays a line chart of daily movement quantities, separated by IN and OUT types.
+* **Dynamic Filtering:** Users can filter the dataset by a required date range (`from`, `to`) and movement type (`All`, `IN`, `OUT`).
+* **Paginated Data Table:** Displays the raw, filtered stock movements (Date/Time, SKU, Movement Type, Quantity) limited to 10 rows per page.
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* **Framework:** React 18
+* **Build Tool:** Vite
+* **Charting Library:** Recharts
+* **HTTP Client:** Axios
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ⚙️ Prerequisites
+
+Before you begin, ensure you have the following installed on your machine:
+
+* **Node.js** (v18 or higher recommended)
+* **npm** (comes with Node.js)
+
+---
+
+## 🏃‍♂️ Getting Started
+
+### 1
